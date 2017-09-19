@@ -1,17 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Product extends Component {
-    render() {
-        const {product} = this.props;
-
-        return (
-            <li>
-              <img src={product.image}></img>
-              <h3>{product.title}</h3>
-              <h4>{product.price}</h4>
-            </li>
-        )
-    }
+const Product = ({product})=>{
+  let  {image,title,price} = product;
+  return (
+    <li>
+      <img src={image} alt="belt"/>
+      <h3>{title}</h3>
+      <h4>{price}</h4>
+    </li>
+  )
+  }
 }
 
 export default Product;
