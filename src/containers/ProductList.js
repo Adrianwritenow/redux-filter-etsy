@@ -29,14 +29,12 @@ const mapStateToProps = function(state) {
     let products;
     // complete the `if else` statement including conditions and `products` value
     if (state.filter === 'underTwenty') {
-      products = state.products;
+      products = state.products.filter(product => product.price<20);
 
     } else if (state.filter === 'overTwenty') {
-      products = state.products;
-
+        products = state.products.filter(product => product.price>20);
     } else {
-      products = state.products;
-
+        products = state.products;
     }
 
     return {products: products}
